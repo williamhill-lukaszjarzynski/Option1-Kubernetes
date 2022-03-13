@@ -3,12 +3,19 @@ The Task
 
 Your task is to create a repo in github and solve below problem
 
-1. Create a kubernetes deployment, svc, hpa, pdb service account in kubernetes cluster. can be
-PaaS/Minikube
-2. Deployment needs a secret with name API_KEY
+1. CREATE 
+   
+   # a kubernetes deployment, 
+   # svc - service, 
+   # hpa - horizontal pod autoscaler, 
+   # pdb - pod disruption budget service account 
+   
+   in kubernetes cluster. (can be PaaS/MINIKUBE)
+   
+2. Deployment needs a secret with name "API_KEY"
 3. Mount this secret in deployment
-4. API_KEY should be a environment variables within the container when container starts inside a pod
-5. API_KEY env variable is not used yet in app, but we want to see the approach
+4. "API_KEY" should be a environment variables within the container when container starts inside a pod
+5. "API_KEY" env variable is not used yet in app, but we want to see the approach
 
 # Acceptance criteria
 
