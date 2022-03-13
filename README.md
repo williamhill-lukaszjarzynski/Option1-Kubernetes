@@ -12,15 +12,23 @@ PaaS/Minikube
 
 # Acceptance criteria
 
-You must provide your code in full with kubernetes manifests or pipelines or scripts
-You must use either public cloud(AWS, GCP, Azure) or Minikube to run the above manifests file
-You do not need to provide access to the cluster in public cloud, only the code
-Your code is clean and readable
-You must document any steps that are not automated in the README.md
-You must have dedicated service account for deployment
-You must have NodePort Type of service for application
-You must have Minimum 2 pods always up and running
-You must have only 1 pod unavailable during Rolling Update of Deployment
+## You must provide your code in full with kubernetes manifests or pipelines or scripts
+
+## You must use either public cloud(AWS, GCP, Azure) or Minikube to run the above manifests file
+
+## You do not need to provide access to the cluster in public cloud, only the code
+
+## Your code is clean and readable
+
+## You must document any steps that are not automated in the README.md
+
+## You must have dedicated service account for deployment
+
+## You must have NodePort Type of service for application
+
+## You must have Minimum 2 pods always up and running
+
+## You must have only 1 pod unavailable during Rolling Update of Deployment
 
 # Assumptions
 
