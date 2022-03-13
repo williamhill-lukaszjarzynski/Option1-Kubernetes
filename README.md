@@ -5,7 +5,20 @@ Your task is to create a repo in github and solve below problem
 
 1. CREATE 
    
-   # a kubernetes deployment, 
+   # a kubernetes deployment,  - YAML configuration file, where RS=2
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
    # svc - service, 
    # hpa - horizontal pod autoscaler, 
    # pdb - pod disruption budget service account 
@@ -33,7 +46,7 @@ Your task is to create a repo in github and solve below problem
 
 ## You must have NodePort Type of service for application
 
-## You must have Minimum 2 pods always up and running
+## You must have Minimum 2 pods always up and running   (X)         - ReplicaSet=2, ReplicaSet=4
 
 ## You must have only 1 pod unavailable during Rolling Update of Deployment
 
