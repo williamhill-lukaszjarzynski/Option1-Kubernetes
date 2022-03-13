@@ -5,9 +5,9 @@ Your task is to create a repo in github and solve below problem
 
 1. CREATE 
    
-   # a kubernetes deployment,  - YAML configuration file, where RS=2
+   # a kubernetes deployment,  - YAML configuration file, where replicas: 2
    
-   
+Each config file has 3 parts: metadata, specification, status   
    
    
    
