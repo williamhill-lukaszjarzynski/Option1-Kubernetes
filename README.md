@@ -32,6 +32,19 @@ Each config file has 3 parts: metadata, specification, status
 4. "API_KEY" should be a environment variables within the container when container starts inside a pod     env with name: "API_KEY"
 5. "API_KEY" env variable is not used yet in app, but we want to see the approach
 
+
+kubectl get secret
+kubectl get all
+kubectl get pod
+kubectl describe pod nginx-deployment-secret
+
+
+
+
+
+
+
+
 # Acceptance criteria
 
 ## You must provide your code in full with kubernetes manifests or pipelines or scripts
