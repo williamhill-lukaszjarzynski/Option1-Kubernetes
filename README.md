@@ -29,7 +29,7 @@ Each config file has 3 parts: metadata, specification, status
    
 2. Deployment needs a secret with name "API_KEY"
 3. Mount this secret in deployment
-4. "API_KEY" should be a environment variables within the container when container starts inside a pod
+4. "API_KEY" should be a environment variables within the container when container starts inside a pod     env with name: "API_KEY"
 5. "API_KEY" env variable is not used yet in app, but we want to see the approach
 
 # Acceptance criteria
