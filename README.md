@@ -63,3 +63,28 @@ Each config file has 3 parts: metadata, specification, status
 3. Provide any code that you required to accomplish this task
 4. You must document any steps that are not automated in the README.md
 
+# MINIKUBE 
+
+kubectl get all
+
+lukasz@lukasz-MS-7B18:~/DEVOPS2022-Infoshare/TASK1$ kubectl get all
+NAME                                    READY   STATUS    RESTARTS   AGE
+pod/nginx-deployment-74d589986c-lshsv   1/1     Running   0          66m
+pod/nginx-deployment-74d589986c-xnb6d   1/1     Running   0          60m
+
+NAME                    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP   3h40m
+service/nginx-service   ClusterIP   10.99.225.105   <none>        80/TCP    21m
+
+NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/nginx-deployment   2/2     2            2           66m
+
+NAME                                          DESIRED   CURRENT   READY   AGE
+replicaset.apps/nginx-deployment-74d589986c   2         2         2       66m
+-------------------------------------------------------------------------------------------------------------------
+   
+   
+   
+   
+
+
