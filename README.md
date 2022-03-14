@@ -1,6 +1,8 @@
 # Option1-Kubernetes
 The Task
 
+http://www.yamllint.com/ - The YAML Validator
+
 Your task is to create a repo in github and solve below problem
 
 1. CREATE 
