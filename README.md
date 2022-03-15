@@ -5,65 +5,67 @@ http://www.yamllint.com/ - The YAML Validator
 
 Your task is to create a repo in github and solve below problem
 
-1. CREATE 
+# All manifests file under:   https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/tree/master
+
+Each config file has 3 parts: metadata, specification, status.
+
+1. 
    
-   # a kubernetes deployment,  - YAML configuration file, where replicas: 2
+   # a kubernetes deployment,  - YAML configuration file, where replicas: 2      - 
+   https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-deployment-secret.yaml
    
-Each config file has 3 parts: metadata, specification, status   
-   
-   
-   
-   
-   
-   
-   
+2. Deployment needs a secret with name "API_KEY"
+3. Mount this secret in deployment
+4. "API_KEY" should be a environment variables within the container when container starts inside a pod     -  env with name: "API_KEY"
+5. "API_KEY" env variable is not used yet in app, but we want to see the approach                          - I put the code into repo to use it,bu we can have it 
+                                                                                                              as object ConfigMap to reference to file
    
    
    
    
    # svc - service, 
+   https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-service.yaml
+   
+   
    # hpa - horizontal pod autoscaler, 
+   
+   
    # pdb - pod disruption budget service account 
    
    in kubernetes cluster. (can be PaaS/MINIKUBE)
    
-2. Deployment needs a secret with name "API_KEY"
-3. Mount this secret in deployment
-4. "API_KEY" should be a environment variables within the container when container starts inside a pod     env with name: "API_KEY"
-5. "API_KEY" env variable is not used yet in app, but we want to see the approach
+   # MINIKUBE            - ALL OBJECTS in K8S CLUSTER from manifests - yaml configuration files:
+   
+     kubectl get all
+
+   
+
 
 
 kubectl get secret
-kubectl get all
 kubectl get pod
 kubectl describe pod nginx-deployment-secret
 
 
-
-
-
-
-
-
 # Acceptance criteria
 
-## You must provide your code in full with kubernetes manifests or pipelines or scripts
+## You must provide your code in full with kubernetes manifests or pipelines or scripts (X)
 
-## You must use either public cloud(AWS, GCP, Azure) or Minikube to run the above manifests file
+## You must use either public cloud(AWS, GCP, Azure) or Minikube to run the above manifests file (X)
 
-## You do not need to provide access to the cluster in public cloud, only the code
+## You do not need to provide access to the cluster in public cloud, only the code (X)
 
-## Your code is clean and readable
+## Your code is clean and readable (X)
 
-## You must document any steps that are not automated in the README.md
+## You must document any steps that are not automated in the README.md (X)
 
-## You must have dedicated service account for deployment
+## You must have dedicated service account for deployment (x)       - lukasz
 
-## You must have NodePort Type of service for application
+## You must have NodePort Type of service for application (X)       - type: NodePort
 
-## You must have Minimum 2 pods always up and running   (X)         - ReplicaSet=2, ReplicaSet=4
+## You must have Minimum 2 pods always up and running   (X)         - ReplicaSet=4
 
-## You must have only 1 pod unavailable during Rolling Update of Deployment
+## You must have only 1 pod unavailable during Rolling Update of Deployment (X)  - type: RollingUpdate with parameter for strategy
 
 # Assumptions
 
@@ -78,24 +80,6 @@ kubectl describe pod nginx-deployment-secret
 3. Provide any code that you required to accomplish this task
 4. You must document any steps that are not automated in the README.md
 
-# MINIKUBE 
-
-kubectl get all
-
-lukasz@lukasz-MS-7B18:~/DEVOPS2022-Infoshare/TASK1$ kubectl get all
-NAME                                    READY   STATUS    RESTARTS   AGE
-pod/nginx-deployment-74d589986c-lshsv   1/1     Running   0          66m
-pod/nginx-deployment-74d589986c-xnb6d   1/1     Running   0          60m
-
-NAME                    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
-service/kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP   3h40m
-service/nginx-service   ClusterIP   10.99.225.105   <none>        80/TCP    21m
-
-NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/nginx-deployment   2/2     2            2           66m
-
-NAME                                          DESIRED   CURRENT   READY   AGE
-replicaset.apps/nginx-deployment-74d589986c   2         2         2       66m
 -------------------------------------------------------------------------------------------------------------------
    
    
