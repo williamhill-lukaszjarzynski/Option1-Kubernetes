@@ -51,6 +51,7 @@ kubectl describe pod nginx-deployment-secret
 # Acceptance criteria
 
 ## You must provide your code in full with kubernetes manifests or pipelines or scripts (X)
+https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/tree/master
 
 ## You must use either public cloud(AWS, GCP, Azure) or Minikube to run the above manifests file (X)
 
@@ -61,12 +62,16 @@ kubectl describe pod nginx-deployment-secret
 ## You must document any steps that are not automated in the README.md (X)
 
 ## You must have dedicated service account for deployment (x)       - lukasz
+https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-serviceaccount.yaml
 
 ## You must have NodePort Type of service for application (X)       - type: NodePort
+https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-service.yaml
 
 ## You must have Minimum 2 pods always up and running   (X)         - ReplicaSet=4
+https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-deployment-secret.yaml
 
 ## You must have only 1 pod unavailable during Rolling Update of Deployment (X)  - type: RollingUpdate with parameter for strategy
+https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-deployment-secret.yaml
 
 # Assumptions
 
