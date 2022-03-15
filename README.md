@@ -11,7 +11,7 @@ Each config file has 3 parts: metadata, specification, status.
 
 1. 
    
-   # a kubernetes deployment,  - YAML configuration file, where replicas: 2      - 
+   # a kubernetes deployment,  - YAML configuration file, where replicas: 4     
    https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-deployment-secret.yaml
    
 2. Deployment needs a secret with name "API_KEY"
@@ -23,11 +23,11 @@ Each config file has 3 parts: metadata, specification, status.
    
    
    
-   # svc - service, 
+   # svc - service
    https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-service.yaml
    
    
-   # hpa - horizontal pod autoscaler, 
+   # hpa - horizontal pod autoscaler
    
    
    # pdb - pod disruption budget service account 
