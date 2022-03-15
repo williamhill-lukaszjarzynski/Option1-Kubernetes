@@ -28,7 +28,7 @@ Each config file has 3 parts: metadata, specification, status.
    https://github.com/williamhill-lukaszjarzynski/Option1-Kubernetes/blob/master/nginx-service.yaml
    
    
-   # hpa - horizontal pod autoscaler
+   # hpa - horizontal pod autoscaler  to auto scale Nginx based applications deployed in Kubernetes
    
    
    # pdb - pod disruption budget service account 
