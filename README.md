@@ -31,7 +31,7 @@ Each config file has 3 parts: metadata, specification, status.
    # hpa - horizontal pod autoscaler  to auto scale Nginx based applications deployed in Kubernetes
    
    
-   # pdb - pod disruption budget service account 
+   # pdb - pod disruption budget service account Specifying a Disruption Budget for your Application nginx
    
    in kubernetes cluster. (can be PaaS/MINIKUBE)
    
