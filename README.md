@@ -18,7 +18,8 @@ Each config file has 3 parts: metadata, specification, status.
 3. Mount this secret in deployment
 4. "API_KEY" should be a environment variables within the container when container starts inside a pod     -  env with name: "API_KEY"
 5. "API_KEY" env variable is not used yet in app, but we want to see the approach                          - I put the code into repo to use it,bu we can have it 
-                                                                                                              as object ConfigMap to reference to file
+                                                                                                              as object ConfigMap to reference to file called:
+                                                                                                              nginx-config.properties
    
    
    
