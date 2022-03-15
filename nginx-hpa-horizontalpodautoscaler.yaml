@@ -1,0 +1,29 @@
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: nginxhpa
+  labels:
+    app.kubernetes.io/name: nginx
+    app.kubernetes.io/instance: nginx
+    app.kubernetes.io/managed-by: nginx
+  annotations:
+    metric-config.external.prometheus-query.prometheus/nginx_http_requests_total: |
+     max(rate(nginx_http_requests_total{job="kubernetes-pods",namespace="default",pod_name=~"nginx.+"}[1m]))
+spec:
+  maxReplicas: 4
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: nginx
+  metrics:
+  - type: External
+    external:
+      metric:
+        name: prometheus-query
+        selector:
+          matchLabels:
+            query-name: nginx_http_requests_total
+      target:
+        type: Value
+        value: "4"
